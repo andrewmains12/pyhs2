@@ -7,20 +7,17 @@ conn = pyhs2.connect(host='192.168.100.139',
 					password='test', 
 					database='default')
 
-conn.close()
 
-'''
 cur = conn.cursor()
 
-cur.execute("SELECT Host,User FROM user")
 
-print(cur.description)
+cur.execute("SELECT * FROM hs2")
 
-print()
+for i in cur.fetch():#
+	print i
 
-for row in cur:
-   print(row)
+#print len(cur.fetch())
 
 cur.close()
 conn.close()
-'''
+
