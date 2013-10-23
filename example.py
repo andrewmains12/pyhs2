@@ -1,9 +1,9 @@
 import pyhs2
 
-conn = pyhs2.connect(host='192.168.100.139', 
-					port=20000,
+conn = pyhs2.connect(host='localhost', 
+					port=10000,
 					authMechanism="PLAIN", 
-					user='hdfs', 
+					user='root', 
 					password='test', 
 					database='default')
 
