@@ -6,18 +6,9 @@ conn = pyhs2.connect(host='localhost',
 					user='root', 
 					password='test', 
 					database='default')
-
-
 cur = conn.cursor()
-
-
-cur.execute("SELECT * FROM hs2")
-
-for i in cur.fetch():#
+cur.execute("show tables")
+for i in cur.fetch():
 	print i
-
-#print len(cur.fetch())
-
 cur.close()
 conn.close()
-
